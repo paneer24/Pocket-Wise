@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.PocketMaster" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ExpenseTracker" parent="Theme.Material3.DayNight.NoActionBar">
 
     </style>
 
-    <style name="Theme.PocketMaster" parent="Base.Theme.PocketMaster" />
+    <style name="Theme.ExpenseTracker" parent="Base.Theme.ExpenseTracker" />
 
     <style name="CustomFabShape" parent="">
         <item name="cornerFamily">rounded</item>

@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.expensetracker.data.dao.CategoryDao
-import com.example.expensetracker.data.dao.`TransactionDao.kt`
+import com.example.expensetracker.data.dao.TransactionDao
 import com.example.expensetracker.data.model.Category
 import com.example.expensetracker.data.model.Transaction
 import com.example.expensetracker.data.model.TransactionType
@@ -16,21 +16,19 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-
 @Database(
     entities = [Transaction::class, Category::class],
     version = 1,
     exportSchema = false
 )
 @TypeConverters(TransactionTypeConverter::class)
-
-abstract class AppDatabase : RoomDatabase(){
-    abstract fun transactionDao(): `TransactionDao.kt`
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun transactionDao(): TransactionDao
     abstract fun categoryDao(): CategoryDao
 
-    companion object{
+    companion object {
         @Volatile
-        private var INSTANCE:AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
@@ -66,7 +64,5 @@ abstract class AppDatabase : RoomDatabase(){
                 instance
             }
         }
-
     }
-
 }

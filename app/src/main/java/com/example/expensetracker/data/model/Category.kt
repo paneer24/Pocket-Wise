@@ -9,4 +9,4 @@ data class Category(
     val name: String,
     val type: TransactionType,
     val color: Int
-))
+)

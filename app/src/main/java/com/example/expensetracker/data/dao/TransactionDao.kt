@@ -4,13 +4,13 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.pocketmaster.data.model.CategoryTotal
-import com.example.pocketmaster.data.model.Transaction
-import com.example.pocketmaster.data.model.TransactionType
+import com.example.expensetracker.data.model.CategoryTotal
+import com.example.expensetracker.data.model.Transaction
+import com.example.expensetracker.data.model.TransactionType
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface `TransactionDao.kt` {
+interface TransactionDao {
     @Query("SELECT * FROM transactions ORDER BY date DESC")
     fun getAllTransactions(): Flow<List<Transaction>>
 
@@ -39,4 +39,4 @@ interface `TransactionDao.kt` {
 
     @Delete
     suspend fun delete(transaction: Transaction)
-}
+} 

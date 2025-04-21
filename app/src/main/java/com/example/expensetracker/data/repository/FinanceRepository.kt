@@ -1,7 +1,7 @@
 package com.example.expensetracker.data.repository
 
 import com.example.expensetracker.data.dao.CategoryDao
-import com.example.expensetracker.data.dao.`TransactionDao.kt`
+import com.example.expensetracker.data.dao.TransactionDao
 import com.example.expensetracker.data.model.Category
 import com.example.expensetracker.data.model.CategoryTotal
 import com.example.expensetracker.data.model.Transaction
@@ -9,7 +9,7 @@ import com.example.expensetracker.data.model.TransactionType
 import kotlinx.coroutines.flow.Flow
 
 class FinanceRepository(
-    private val transactionDao: `TransactionDao.kt`,
+    private val transactionDao: TransactionDao,
     private val categoryDao: CategoryDao
 ) {
     val allTransactions = transactionDao.getAllTransactions()

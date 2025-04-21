@@ -18,7 +18,7 @@ import com.example.expensetracker.data.model.Transaction
 import com.example.expensetracker.data.model.TransactionType
 import com.example.expensetracker.databinding.FragmentAddTransactionDialogBinding
 import com.example.expensetracker.ui.viewmodel.FinanceViewModel
-import com.example.pocketmaster.R
+import com.example.expensetracker.R
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.launch
 

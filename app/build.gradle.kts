@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pocketmaster"
+    namespace = "com.example.expensetracker"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.pocketmaster"
+        applicationId = "com.example.expensetracker"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
@@ -51,8 +51,8 @@ dependencies {
     implementation(libs.androidx.animation.core.android)
 
 
-    val room_version = "2.6.1"
-    val lifecycle_version = "2.6.1"
+    val room_version = "2.7.0"
+    val lifecycle_version = "2.8.7"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
